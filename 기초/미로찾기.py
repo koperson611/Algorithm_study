@@ -8,7 +8,7 @@ def mazeFind(x , y):
     elif(x == N-1 & y == N-1): # 출구인가?
         maze[x][y] = PATH_COLOR # 최종목적지는 가능한 길이므로 가능하다고 변경
         return True
-    else: # x, y값이 미로 내부다... 
+    else: # x, y값이 미로 내부다...  
         maze[x][y] = PATH_COLOR # maze가 아직 확실한 판단전에 방문여부만 체크
         if(mazeFind(x-1,y) | mazeFind(x,y+1) | mazeFind(x+1,y) | mazeFind(x,y-1)): # 현재 위치에서 4방향이 가능한지
             return True
